@@ -1,7 +1,9 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const server = require('./configs/server')();
+const config = require('./configs/config');
+const database = require('./configs/database');
 
-app.get('/', (req, res) => res.send('Hello World!'))
+//create the basic server setup 
+server.create(config, database);
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`)) 
+//start the server
+server.start();
