@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/almgwary/nodejs-server/issues"
   },
-  "homepage": "https://github.com/almgwary/nodejs-server#readme"
+  "homepage": "https://github.com/almgwary/nodejs-server#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
