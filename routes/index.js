@@ -1,3 +1,4 @@
+const apiMessageRoute = require('./message');
 
 const init = (server) => {
     server.get('*', function (req, res, next) {
@@ -5,6 +6,7 @@ const init = (server) => {
         return next();
     });
     
+    server.use('/api', apiMessageRoute);
 }
 module.exports = {
     init: init
