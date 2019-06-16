@@ -1,0 +1,11 @@
+# To ignore IDE (eclipse / intellij) related files
+.classpath
+.project
+.settings
+.idea
+.metadata
+*.iml
+*.ipr
+
+# To ignore node_modules
+node_modules/
