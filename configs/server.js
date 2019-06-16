@@ -1,9 +1,13 @@
-const express = require('express');
+const express = require('express')();
+var http = require('http').createServer(express);
+var io = require('socket.io')(http);
+
+
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 module.exports = function () {
-    let server = express(),
+    let server = express,
         create,
         start;
 
@@ -31,6 +35,9 @@ module.exports = function () {
 
         // Set up routes
         routes.init(server);
+
+        // Set up socket
+        require('./socket')(io)
     };
 
     
