@@ -4,5 +4,10 @@ module.exports = function (io) {
         console.log('a user connected');
         socket.broadcast.emit('hi');
     });
+
+
+    socket.on('push', function(msg){
+        console.log('message: ' + msg);
+        io.emit('push', msg);
     });
 };
