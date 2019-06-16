@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Nodejs server with express and socket io",
   "main": "app.js",
-  "scripts": {},
+  "scripts": {
+    "start": "node app.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/almgwary/nodejs-server.git"
