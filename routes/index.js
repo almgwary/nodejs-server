@@ -1,4 +1,5 @@
 const apiMessageRoute = require('./message');
+const apiUserRoute = require('./user');
 
 const init = (server) => {
     server.get('*', function (req, res, next) {
@@ -7,6 +8,7 @@ const init = (server) => {
     });
     
     server.use('/api', apiMessageRoute);
+    server.use('/api', apiUserRoute);
 }
 module.exports = {
     init: init
